@@ -1,4 +1,3 @@
-import zope.event.classhandler
 import inject
 import applauncher.kernel
 from applauncher.kernel import InjectorReadyEvent
@@ -21,8 +20,10 @@ class MongoEngineBundle(object):
                 "authentication_source": ""
             }
         }
-
-        zope.event.classhandler.handler(InjectorReadyEvent, self.event_listener)
+        
+        self.event_listeners = [
+            (InjectorReadyEvent, self.event_listener)
+        ]
 
     @staticmethod
     def _value_or_none(value):
@@ -46,8 +47,5 @@ class MongoEngineBundle(object):
             **{k: v for k, v in kwargs.items() if v is not None}
         )
         self.logger.info("Connected to mongo")
-
-
-
 
 

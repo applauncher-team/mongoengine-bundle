@@ -1,8 +1,8 @@
-from distutils.core import setup
+from setuptools import setup
 setup(
   name='mongoengine_bundle',
   packages=['mongoengine_bundle'],
-  version='1.0',
+  version='1.1',
   description='mongoengine support for applauncher',
   author='Alvaro Garcia Gomez',
   author_email='maxpowel@gmail.com',
