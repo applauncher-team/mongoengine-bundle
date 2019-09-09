@@ -15,7 +15,7 @@ class MongoEngineBundle(object):
                 "port": 27017,
                 "username": "",
                 "password": "",
-                "ssl": "",
+                "ssl": False,
                 "replica_set": "",
                 "authentication_source": "",
                 "retry_writes": False

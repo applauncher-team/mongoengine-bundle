@@ -6,7 +6,7 @@ with open('requirements.txt') as fp:
 setup(
     name='mongoengine_bundle',
     packages=find_packages(),
-    version='1.2',
+    version='1.4',
     description='mongoengine support for applauncher',
     author='Alvaro Garcia Gomez',
     author_email='maxpowel@gmail.com',
